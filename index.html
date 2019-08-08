@@ -58,22 +58,17 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu"><a href="index.html">Accueil</a>							</li>
+							<li class="active-menu"><a href="index.html">Accueil</a></li>
 
 							<li>
 								<a href="produits.html">Catalogue</a>
 							</li>
-
-							
-
 							<li>
-							  <a data-toggle="modal" href="#exampleModal">Créer son compte</a>
+							  <a data-toggle="modal" href="#modalRegister">Créer son compte</a>
 							</li>
-
 							<li>
 								<a href="about.html">S'identifier</a>
 							</li>
-
 							<li>
 								<a href="contact.html">Contact</a>
 							</li>
@@ -82,7 +77,7 @@
 
 
                     <!-- Modal -->
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					  <div class="modal-dialog" role="document">
 						<div class="modal-content">
 						  <div class="modal-header">
@@ -93,67 +88,58 @@
 						  </div>
 						  
 						  
-						  <div class="modal-body" >
-
-							<!-- ================================================================================================================================================================== -->
-						 
-							<div>
-							
-								<div id="div1" >
-								
-									<p> javazon </p>
-									<hr noshade="noshade" />
-									
-									<div id="div2" >
-									<p id="p1"> Inscription </p>
-									
-									<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
-									<form >   <!-- method="POST" action="traiter"   id='form1'>  -->
-										
-									   <div class="form-group">  
-											<label for="exampleInputName">* Nom:</label>
-											<input type="name" id="exampleInputName" aria-describedby="emailHelp" placeholder="Entrez votre nom" class="input_long">
-									  </div>
-									  
-									  <div class="form-group">
-										<label for="exampleInputEmail1">* Email:</label>
-										<input type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre e-mail" class="input_long">
-										<small id="emailHelp" class="form-text text-muted"></small>
-									  </div>
-									  
-									  <div class="form-group">
-										<label for="exampleInputPassword1">* Mot de passe:</label>
-										<input type="password"  id="exampleInputPassword1" placeholder="Entrez mot de passe">
-									  </div>
-									  
-									  <div class="form-group">
-										<label for="exampleInputPassword2">* Retaper mot de passe:</label>
-										<input type="password" id="exampleInputPassword1" placeholder="Confirmer mot de passe">   <!-- class="form-control"   -->
-									  </div>
-									  <br>
-									  
-									  <div class="form-group form-check" id="div_check">
-										<input type="checkbox" class="form-check-input" id="exampleCheck1">
-										<label class="form-check-label" for="exampleCheck1" id="label_check"> J'accepte les <u style="color:blue"> conditions de vente</u>. </label>
-									  </div> <br><br>
-									  
-									  <button type="submit" class="btn btn-primary" id="button1"> Je m'inscris </button>
-									   
-									</form>
-									<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
-									</div> 
-									<hr noshade="noshade" />
+						  <div class="modal-body">
+						  	<div class="form-group">
+								<label for="name" class="cols-sm-2 control-label">Nom</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" name="name" id="name" placeholder="Entrer votre nom"/>
+									</div>
 								</div>
-									
+							</div>
+
+							<div class="form-group">
+								<label for="email" class="cols-sm-2 control-label">Email</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" name="email" id="email"  placeholder="Entrer votre Email"/>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="password" class="cols-sm-2 control-label">Mot de passe</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+										<input type="password" class="form-control" name="password" id="password"  placeholder="Entrer un mot de passe"/>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirmer le mot de passe</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirmer votre mot de passe"/>
+								</div>
+							</div>
 						</div>
-						<!-- ================================================================================================================================================================== -->
-						 
-						 </div>
+						<div class="form-group">
+              				<input type="checkbox" id="checkboxRegister">
+              				<label for="checkboxRegister" class="white-text form-check-label">Accepter les<a href="#" class="green-text font-weight-bold"> Conditions générales</a></label>
+            				</div>
+          				</div>
+
+							
 						
 						  
 						  <div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-							<button type="button" class="btn btn-primary">Enregistrer</button>
+							<button type="button" class="btn btn-primary">Créer compte</button>
 						  </div>
 						</div>
 					  </div>
@@ -172,7 +158,7 @@
 								<i class="zmdi zmdi-shopping-cart"></i>
 							</div>
 						</div>
-</div>
+					</div>
 				</nav>
 			</div>	
 		</div>
