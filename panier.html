@@ -218,14 +218,14 @@
 		<!-- Menu Mobile -->
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-				<ul class="main-menu-m">
-					<li><a href="index.html">Accueil</a></li>
-					<li><a href="produits.html">Catalogue</a></li>
-					<li><a href="inscriptionMobile.html">Créer son compte</a></li>
-					<li><a href="loginMobile.html">S'identifier</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
+			<ul class="main-menu-m">
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="produits.html">Catalogue</a></li>
+				<li><a href="inscriptionMobile.html">Créer son compte</a></li>
+				<li><a href="loginMobile.html">S'identifier</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
 		<!-- Modal Search -->
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
@@ -334,8 +334,9 @@
 									<th class="column-1">Produit</th>
 									<th class="column-2"></th>
 									<th class="column-3">Prix</th>
-									<th class="column-4">Quantitée</th>
+									<th class="column-4" style="text-align: center;">Quantitée</th>
 									<th class="column-5">Total</th>
+									<th class="column-6"></th>
 								</tr>
 
 								<tr class="table_row">
@@ -361,6 +362,7 @@
 										</div>
 									</td>
 									<td class="column-5">36.00 €</td>
+									<td class="column-6" style="padding-right: 20px;"><button type="button" class="btn btn-danger">Supprimer</button></td>
 								</tr>
 
 								<tr class="table_row">
@@ -386,6 +388,7 @@
 										</div>
 									</td>
 									<td class="column-5">16.00 €</td>
+									<td class="column-6"><button type="button" class="btn btn-danger">Supprimer</button></td>
 								</tr>
 							</table>
 						</div>
@@ -426,22 +429,18 @@
 							<div class="size-209 p-t-1"><span class="mtext-110 cl2">79.65 €</span></div>
 						</div>
 
-						<buttoni id="btnPaiement" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer" >
-							PROCEDER AU PAIEMENT</button>
+						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer" onclick="paiement()"> PROCEDER AU PAIEMENT</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</form>
 
-
-
-
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 col-lg-3 p-b-50">
+					<div class="col-sm-6 col-lg-4 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30">
 							Categories
 						</h4>
@@ -452,7 +451,7 @@
 						</ul>
 					</div>
 	
-					<div class="col-sm-6 col-lg-3 p-b-50">
+					<div class="col-sm-6 col-lg-4 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30">AIDE</h4>
 						<ul>
 							<li class="p-b-10"> <a href="panier.html" class="stext-107  hov-cl1 trans-04 couleurElementFooter"> Suivi de commandes</a>
@@ -461,7 +460,7 @@
 						</ul>
 					</div>
 	
-					<div class="col-sm-6 col-lg-3 p-b-50">
+					<div class="col-sm-6 col-lg-4 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30"> <a href="contact.html" style="color: white;">CONTACT / SUIVI</a></h4>
 						<p class="stext-107 size-201 couleurElementFooter"> N'hésitez pas à nous<a href="contact.html"> contacter</a> directement par mail pour toutes
 							questions. Laissez nous vos commentaires sur les articles.</p>
@@ -521,6 +520,14 @@
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
+	<script>
+		function paiement(){
+			alert('Paiement effectué !');
+			window.location.href = "index.html";
+			
+		}
+	</script>
+	<!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function () {
@@ -543,38 +550,14 @@
 		$('.js-addcart-detail').each(function () {
 			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
 			$(this).on('click', function () {
-				swal(nameProduct, "paiement effectué !", "success");
+				swal(nameProduct, "est ajouté à la commande !", "success");
 			});
 		});
-
-		$('btnPaiement').on('click', function(){
-  			swal(
-    			'Bravo!',
-    			'Paiement effectué !',
-    			'success'
-  			)
-		});
-
 	</script>
 	<!--===============================================================================================-->
 	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-	<script>
-		$('.js-pscroll').each(function () {
-			$(this).css('position', 'relative');
-			$(this).css('overflow', 'hidden');
-			var ps = new PerfectScrollbar(this, {
-				wheelSpeed: 1,
-				scrollingThreshold: 1000,
-				wheelPropagation: false,
-			});
 
-			$(window).on('resize', function () {
-				ps.update();
-			})
-		});
-	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
