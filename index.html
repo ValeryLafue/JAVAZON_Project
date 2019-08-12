@@ -35,6 +35,12 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/monStyle.css">
+	
+	<!-- Pour l'affichage pup-up des conditions générales lors du click sur "conditions générales" (créer un compte) -->
+	<link rel="stylesheet" href="css/scroll_ConditionsUtilisation.css">
+	<script type="text/javascript" src="texte_conditions_generales_fr.txt"></script>  <!-- contenu du texte qui s'affichera dans le modal-body -->
+	<!--===============================================================================================-->
+	
 	<style type="text/css">
 		.animsition .bg3.p-t-75.p-b-32 {
 			color: #e0a800;
@@ -132,7 +138,7 @@
 										<div class="form-group">
 											<input type="checkbox" id="checkboxRegister">
 											<label for="checkboxRegister" class="white-text form-check-label">Accepter les
-											    <a href="#" class="green-text font-weight-bold" data-toggle="modal"  data-target="#exampleModalCenter"> Conditions générales</a>
+											    <a href="#" class="green-text font-weight-bold" data-toggle="modal"  data-target="#myModal"> Conditions générales</a>
 											</label>
 										</div>
 									</form>
@@ -148,60 +154,67 @@
 					<!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
 					
 					
+					
+					
+		
+					
 					<!-- Modal Conditions générales --------------------------------------------------------------------------------------------------------------------------------- -->
-					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">Javazon: Conditions génénarales d'inscription</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							<script type="text/javascript" src="texte_conditions_generales_fr.txt"></script>
-							<div id="box-r-3">
-								  <h1><script Language='JavaScript'>document.write(introdroite)</script></h1>
-								  <p><script Language='JavaScript'>document.write(textedroite)</script></p>
-								  <br>
-								  <h4><script Language='JavaScript'>document.write(article1_titre)</script></h4>
-								  <p><script Language='JavaScript'>document.write(article1_contenu)</script></p>
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article2_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article2_contenu)</script></p>	
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article3_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article3_contenu)</script></p>	
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article4_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article4_contenu)</script></p>
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article5_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article5_contenu)</script></p>
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article7_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article7_contenu)</script></p>	
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article12_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article12_contenu)</script></p>	
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article13_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article13_contenu)</script></p>	
-								  <br>	
-								  <h4><script Language='JavaScript'>document.write(article14_titre)  </script></h4>
-								  <p> <script Language='JavaScript'>document.write(article14_contenu)</script></p>				  
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" id="modal-dialog_creerCompte">
+							<div class="modal-content" id="modal-content_creerCompte">
+						  
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									<h4 class="modal-title" id="myModalLabel">Conditions générales</h4>
+								</div>
+						  
+								<div class="modal-body" id="modal-body_creerCompte">
+									
+										<div id="box-r-3">
+											  <h1><script Language='JavaScript'>document.write(introdroite)</script></h1>
+											  <p><script Language='JavaScript'>document.write(textedroite)</script></p>
+											  <br>
+											  <h4><script Language='JavaScript'>document.write(article1_titre)</script></h4>
+											  <p><script Language='JavaScript'>document.write(article1_contenu)</script></p>
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article2_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article2_contenu)</script></p>	
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article3_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article3_contenu)</script></p>	
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article4_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article4_contenu)</script></p>
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article5_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article5_contenu)</script></p>
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article7_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article7_contenu)</script></p>	
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article12_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article12_contenu)</script></p>	
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article13_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article13_contenu)</script></p>	
+											  <br>	
+											  <h4><script Language='JavaScript'>document.write(article14_titre)  </script></h4>
+											  <p> <script Language='JavaScript'>document.write(article14_contenu)</script></p>		
+
+										</div>
+								</div>
+						  
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+								</div>
 							</div>
-							
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  </div>
 						</div>
-					  </div>
 					</div>
-                    <!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
-					
-					
+					<!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+									
+									
+			
 					<!-- Modal Login ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 					<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog"
 						aria-labelledby="exampleModalLabel" aria-hidden="true">
